@@ -43,6 +43,16 @@ func (c *Context) Param(name string) string {
 	return ""
 }
 
+// Params return all of the param
+func (c *Context) Params() []string {
+	return c.pnames
+}
+
+// Values return all of the value
+func (c *Context) Values() []string {
+	return c.pvalues
+}
+
 // Get returns the named data item previously registered with the context by calling Set.
 // If the named data item cannot be found, nil will be returned.
 func (c *Context) Get(name string) interface{} {
